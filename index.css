@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+ :root {
+    --first-font: 'Josefin Sans', sans-serif;
+    --white: #ffffff;
+    --black: #000000;
+    --light: #42cbf8;
+    --peach: #FFE5B4;
+    --red: rgb(199, 14, 14);
+    --grey: rgb(122, 120, 120);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--first-font);
+    background-color: #9A9483;
+}
+
+.img-container {
+    align-self: center;
+}
+
+img {
+    height: 30rem;
+    border-radius: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 4rem;
+    gap: 1rem;
+}
+
+.info {
+    padding-top: 4rem;
+    text-align: center;
+    width: 20rem;
+    padding: 1rem;
+}
+
+.info>h2 {
+    text-transform: capitalize;
+}
+
+.birthdate {
+    margin-top: 1rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+.deadline {
+    margin-top: 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.deadline-format {
+    background-color: #1A374D;
+    padding: 0.7em;
+    color: white;
+}
+
+@media screen and (max-width:725px) {
+    body {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+    .section {
+        flex-direction: column;
+        margin-bottom: 3rem;
+        gap: 1;
+    }
+    .info {
+        padding: 1rem;
+        align-self: center;
+        border-radius: 3rem;
+        box-shadow: grey 1rem 1rem 1rem, grey -1rem -1rem 1rem, grey -1rem 1rem 1rem, grey 1rem -1rem 1rem;
+    }
+    .deadline {
+        gap: 1rem;
+    }
+    img {
+        box-shadow: grey 1rem 1rem 1rem, grey -1rem -1rem 1rem, grey -1rem 1rem 1rem, grey 1rem -1rem 1rem;
+    }
+    .img-container {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width:360px) {
+    img {
+        width: 15rem;
+        height: 20rem;
+    }
+    .img-container {
+        align-self: center;
+    }
+    .info {
+        width: 15rem;
+    }
+    .deadline {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .deadline-format {
+        height: 50px;
+    }
+}
